@@ -9,8 +9,12 @@ import { DbzService } from '../services/dbz.service';
   styleUrls: ['./personajes.component.sass']
 })
 export class PersonajesComponent {
+  
+  get personajes() {
+    return this.dbzService.personajes;
+  }
 
-@Input() personajes: Personaje[] = []
+// @Input() personajes: Personaje[] = []
 
 constructor( private dbzService: DbzService ) { }
 
